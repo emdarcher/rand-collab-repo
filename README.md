@@ -7,4 +7,5 @@ For web-oriented things go to [rand-collab-website](https://github.com/emdarcher
 
 ## Collaborators
   - Ethan Durrant
+  - Philip Huang
   - `name`

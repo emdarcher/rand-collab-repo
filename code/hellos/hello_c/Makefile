@@ -4,4 +4,4 @@ TARGET=hello_c
 CC=gcc
 
 all:
-	$(CC) $(TARGET) -o $(TARGET)_exec
+	$(CC) $(TARGET).c -o $(TARGET)_exec

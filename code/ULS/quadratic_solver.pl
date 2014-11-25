@@ -6,11 +6,11 @@ use warnings;
 print "Quadratic equation solver:
 please enter the a,b,&c values of ax^2+bx+c = 0 below:\n";
 print "value a: ";
-chomp(my $a=<STDIN>);unless($a){$a=0;}
+chomp(my $a=<STDIN>);unless($a){$a=0;}#very structured bracketed way
 print "value b: ";
-chomp(my $b=<STDIN>);$b=0 unless $b;
+chomp(my $b=<STDIN>);$b=0 unless $b;#same as above, just nicer looking
 print "value c: ";
-chomp(my $c=<STDIN>);$c=0 unless $c;
+chomp(my $c=<STDIN>);$c ||= 0; #equivalent to: $c=0 unless $c;
 
 #quadratic equation part
 my $root = eval {(sqrt(($b**2)-(4*$a*$c)))}

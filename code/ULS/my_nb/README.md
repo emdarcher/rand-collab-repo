@@ -1,7 +1,6 @@
 my_nb
 =====
-`my_nb.py` is a python script that displays the latest bus time predictions from nextbus.com for a particular stop id number.
-  * usage: `python my_nb.py <stop_id> ` 
+
 ###my_nb.py :
 this script gets the latest bus top time predictions from nextbus.com
 use by doing `python my_nb.py <stopId>` where stopID is the 

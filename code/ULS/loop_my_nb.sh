@@ -14,5 +14,6 @@ echo "now looping the $PYTHON_SCRIPT script. press CTRL+C to cancel"
 while [ 1 ]; do  #an infinite while loop
     echo "------------ $(date) ------------" #prints '-'s and the date+time
     python $PYTHON_SCRIPT $STOP_ID #runs the script using 'python'
+    echo "remember, press CTRL+C to stop program. :)"
     sleep $SLEEP_TIME #sleeps for a certain time in seconds
 done;

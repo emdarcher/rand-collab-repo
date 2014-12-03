@@ -45,6 +45,7 @@ remember, press CTRL+C to stop program. :)
 This is a slightly more advanced version of the `loop_my_nb.sh` script that adds the ability to set the loop delay in the command line arguments. In addition it has built in help and usage info, and extra user-error detection.
 use like the `loop_my_nb.sh` script or set the amount of seconds to delay between loops of the `my_nb.py` program using the `-s` or `--sleeptime` flags, also you can get usage help by using the `-h` or `--help` flags.
 usage: `bash loop_my_nb_adv.sh <stop_id> [[[-s | --sleeptime] <sleep_time>] | -h]`
+
 example using stop id 14838 and a delay between loops of 5 seconds:
 `bash loop_my_nb_adv.sh 14838 -s 5` or `bash loop_my_nb_adv.sh 14838 --sleeptime 5`
 or  `./loop_my_nb_adv.sh 14838 -s 5` if using on a Unix-based system with `/bin/bash`

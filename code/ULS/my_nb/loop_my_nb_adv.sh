@@ -32,9 +32,9 @@ STOP_ID=$1
 SLEEP_TIME=5
 
 #checks the second argument ( $2 )
-#if it isn't blank it continues to check for flags,
+#while it isn't blank it continues to check for flags,
 #else it continues and SLEEP_TIME keeps it's default value
-if [ "$2" != "" ];then 
+while [ "$2" != "" ];do 
     case $2 in             #checks different cases in arg $2
         -s | --sleeptime )     #check for sleep time arg
 	    shift                  #shift args so what was $3 is now $2
@@ -43,19 +43,21 @@ if [ "$2" != "" ];then
             else    #else tell the user they did it wrong and call 'usage' function
 	        echo "please add a sleep time value after the -s or --sleeptime argument!" 
                 usage
-            fi  ;;
+            fi  
+	    shift ;;
         -h | --help ) usage ;;  #check for help flags, give them 'usage'
         * ) usage ;;  #if they entered some random nonsense (* wildcard), give 'usage'
     esac #end case statement
-fi #end if statement
+done #end while statement
 
 
 #change this to the name of the python script to loop
 PYTHON_SCRIPT="my_nb.py"
 
-echo "now looping the $PYTHON_SCRIPT script. press CTRL+C to cancel"
+echo "now looping the $PYTHON_SCRIPT script with a delay of $SLEEP_TIME seconds. 
+press CTRL+C to cancel"
 while [ 1 ]; do  #an infinite while loop
-    echo "------------ $(date) ------------" #prints '-'s and the date+time
+    echo -e "\n------------ $(date) ------------" #prints '-'s and the date+time
     python $PYTHON_SCRIPT $STOP_ID #runs the script using 'python'
     echo "remember, press CTRL+C to stop program. :)"
     sleep $SLEEP_TIME #sleeps for a certain time in seconds

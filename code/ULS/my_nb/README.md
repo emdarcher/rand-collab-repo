@@ -29,7 +29,7 @@ the `SLEEP_TIME` variable.
 use like you would the `my_nb.py` script by putting the stop id after
 the program as the first argument like `bash loop_my_nb.sh <stop_id> `
 An example with same stop id as above:
-  `bash loop_my_nb.sh 14839`
+  `bash loop_my_nb.sh 14838`
 example output
 ```
 now looping the my_nb.py script. press CTRL+C to cancel
@@ -40,3 +40,23 @@ now looping the my_nb.py script. press CTRL+C to cancel
 (71:19 left) 29-Sunset -> Inbound to Baker Beach
 remember, press CTRL+C to stop program. :)
 ```
+
+###loop_my_nb_adv.sh :
+This is a slightly more advanced version of the `loop_my_nb.sh` script that adds the ability to set the loop delay in the command line arguments. In addition it has built in help and usage info, and extra user-error detection.
+use like the `loop_my_nb.sh` script or set the amount of seconds to delay between loops of the `my_nb.py` program using the `-s` or `--sleeptime` flags, also you can get usage help by using the `-h` or `--help` flags.
+usage: `bash loop_my_nb_adv.sh <stop_id> [[[-s | --sleeptime] <sleep_time>] | -h]`
+example using stop id 14838 and a delay between loops of 5 seconds:
+`bash loop_my_nb_adv.sh 14838 -s 5` or `bash loop_my_nb_adv.sh 14838 --sleeptime 5`
+or  `./loop_my_nb_adv.sh 14838 -s 5` if using on a Unix-based system with `/bin/bash`
+example output:
+```
+w looping the my_nb.py script with a delay of 3 seconds. 
+press CTRL+C to cancel
+------------ Tue Dec  2 21:43:08 PST 2014 ------------
+(8:16 left) 29-Sunset -> Inbound to Baker Beach
+(30:7 left) 29-Sunset -> Inbound to Baker Beach
+(53:53 left) 29-Sunset -> Inbound to Baker Beach
+(81:9 left) 29-Sunset -> Inbound to Baker Beach
+remember, press CTRL+C to stop program. :)
+```
+ 

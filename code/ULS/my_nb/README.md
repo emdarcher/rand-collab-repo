@@ -51,7 +51,7 @@ example using stop id 14838 and a delay between loops of 5 seconds:
 or  `./loop_my_nb_adv.sh 14838 -s 5` if using on a Unix-based system with `/bin/bash`
 example output:
 ```
-w looping the my_nb.py script with a delay of 3 seconds. 
+now looping the my_nb.py script with a delay of 3 seconds. 
 press CTRL+C to cancel
 ------------ Tue Dec  2 21:43:08 PST 2014 ------------
 (8:16 left) 29-Sunset -> Inbound to Baker Beach

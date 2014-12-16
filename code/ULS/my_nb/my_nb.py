@@ -19,6 +19,7 @@ import httplib
 #to use that ID just run this command:
 # python my_nb.py 14838
 #and then it should show the next 5 predictions.
+#M-ocean-view eucalyptus and right-of way inbound is 16220
 
 agency_id = 'sf-muni' #change this to have the correct agency ID
 
